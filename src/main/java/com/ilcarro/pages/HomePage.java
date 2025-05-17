@@ -26,4 +26,12 @@ public class HomePage extends BasePage {
     }
 
 
+    @FindBy(xpath = "//a[.=' Let the car work ']")
+    WebElement addCarToWorkLink;
+
+    public LetCarWorkPage clickOnAddCarToWork() {
+        click(addCarToWorkLink);
+        return new LetCarWorkPage(driver);
+    }
+
 }
