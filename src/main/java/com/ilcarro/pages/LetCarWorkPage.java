@@ -114,7 +114,7 @@ public class LetCarWorkPage extends BasePage {
     public LetCarWorkPage uploadPhotos(List<String> filePaths) {
         for (String fp : filePaths) {
             String path = new File(fp).getAbsolutePath();
-            uploadPhoto.sendKeys(path);
+            uploadPhoto.sendKeys(fp);
             uploadPhoto.clear();
         }
         return this;
